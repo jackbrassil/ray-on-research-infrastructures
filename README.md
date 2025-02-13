@@ -1,2 +1,2 @@
 # ray-on-research-infrastructures
-Using Ray on FABRIC and CloudLab
+Using Ansycale's Ray software framework on FABRIC and CloudLab
