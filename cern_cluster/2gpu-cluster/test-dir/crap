@@ -1,0 +1,6 @@
+without GPU: 16.568650101005915
+with GPU: 0.3790616370024509
+
+real	0m17.550s
+user	0m20.026s
+sys	0m0.176s

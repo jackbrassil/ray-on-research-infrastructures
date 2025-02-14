@@ -1,0 +1,5 @@
+ssh into worker nodem start ray there too and connected back to headnode
+
+gpu_node2
+
+ray start --address=192.168.100.1:6379

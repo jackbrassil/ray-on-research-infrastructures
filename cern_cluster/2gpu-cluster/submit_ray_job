@@ -1,0 +1,4 @@
+To run the script manually on the cluster do this on the head node:
+
+1) Run:
+RAY_ADDRESS='http://127.0.0.1:8265' ray job submit --working-dir test-dir -- python lightning_mnist_example_cpu1gpu1_gold.py
