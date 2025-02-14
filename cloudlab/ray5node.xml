@@ -1,0 +1,64 @@
+<rspec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jacks="http://www.protogeni.net/resources/rspec/ext/jacks/1" xmlns:client="http://www.protogeni.net/resources/rspec/ext/client/1" xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" xmlns="http://www.geni.net/resources/rspec/3" xsi:schemaLocation="http://www.geni.net/resources/rspec/3 http://www.geni.net/resources/rspec/3/request.xsd" type="request">
+  <rspec_tour xmlns="http://www.protogeni.net/resources/rspec/ext/apt-tour/1">
+    <description type="markdown">DGL 1.1 + PyTorch 2.1 + CUDA 12.1 + Ubuntu 22.04 + c240g5</description>
+    <instructions type="markdown">Wait for the setup script to finish. Then GPU nodes will reboot in order to load their NVIDIA drivers. After reboot, you may login.</instructions>
+  </rspec_tour>
+  <node client_id="gpu-node1" exclusive="true">
+    <sliver_type name="raw">
+      <disk_image name="urn:publicid:IDN+wisc.cloudlab.us+image+ray-cluster-PG0:ray-cuda-pytorch22.04"/>
+    </sliver_type>
+    <hardware_type name="c240g5"/>
+    <interface client_id="node-:if1">
+      <ip address="192.168.1.0" netmask="255.255.255.0" type="ipv4"/>
+    </interface>
+    <emulab:blockstore name="bs-11" mountpoint="/data" class="local" size="1024GB" placement="any"/>
+  </node>
+  <node client_id="gpu-node2" exclusive="true">
+    <sliver_type name="raw">
+      <disk_image name="urn:publicid:IDN+wisc.cloudlab.us+image+ray-cluster-PG0:ray-cuda-pytorch22.04"/>
+    </sliver_type>
+    <hardware_type name="c240g5"/>
+    <interface client_id="node-:if2">
+      <ip address="192.168.1.0" netmask="255.255.255.0" type="ipv4"/>
+    </interface>
+    <emulab:blockstore name="bs-12" mountpoint="/data" class="local" size="1024GB" placement="any"/>
+  </node>
+  <node client_id="gpu-node3" exclusive="true">
+    <sliver_type name="raw">
+      <disk_image name="urn:publicid:IDN+wisc.cloudlab.us+image+ray-cluster-PG0:ray-cuda-pytorch22.04"/>
+    </sliver_type>
+    <hardware_type name="c240g5"/>
+    <interface client_id="node-:if3">
+      <ip address="192.168.1.0" netmask="255.255.255.0" type="ipv4"/>
+    </interface>
+    <emulab:blockstore name="bs-13" mountpoint="/data" class="local" size="1024GB" placement="any"/>
+  </node>
+  <node client_id="gpu-node4" exclusive="true">
+    <sliver_type name="raw">
+      <disk_image name="urn:publicid:IDN+wisc.cloudlab.us+image+ray-cluster-PG0:ray-cuda-pytorch22.04"/>
+    </sliver_type>
+    <hardware_type name="c240g5"/>
+    <interface client_id="node-:if4">
+      <ip address="192.168.1.0" netmask="255.255.255.0" type="ipv4"/>
+    </interface>
+    <emulab:blockstore name="bs-14" mountpoint="/data" class="local" size="1024GB" placement="any"/>
+  </node>
+  <node client_id="gpu-node5" exclusive="true">
+    <sliver_type name="raw">
+      <disk_image name="urn:publicid:IDN+wisc.cloudlab.us+image+ray-cluster-PG0:ray-cuda-pytorch22.04"/>
+    </sliver_type>
+    <hardware_type name="c240g5"/>
+    <interface client_id="node-:if5">
+      <ip address="192.168.1.0" netmask="255.255.255.0" type="ipv4"/>
+    </interface>
+    <emulab:blockstore name="bs-15" mountpoint="/data" class="local" size="1024GB" placement="any"/>
+  </node>
+  <data_set xmlns="http://www.protogeni.net/resources/rspec/ext/profile-parameters/1">
+    <data_item name="emulab.net.parameter.node_hw">c240g5</data_item>
+    <data_item name="emulab.net.parameter.user_names">jbrass1</data_item>
+    <data_item name="emulab.net.parameter.num_nodes">5</data_item>
+    <data_item name="emulab.net.parameter.os_image">urn:publicid:IDN+wisc.cloudlab.us+image+ray-cluster-PG0:ray-cuda-pytorch22.04</data_item>
+    <data_item name="emulab.net.parameter.project_group_name">ray-cluster</data_item>
+    <data_item name="emulab.net.parameter.data_size">1024GB</data_item>
+  </data_set>
+</rspec>
